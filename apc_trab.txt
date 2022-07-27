@@ -1,0 +1,341 @@
+algoritmo personal_trainer;
+// Síntese
+//  Objetivo: promover um treino em uma academia de acordo com o perfil e objetivo do individuo
+//  Entrada :Nivel de treino e Grupo muscular desejado
+//  Saída   : Treino especifico para o individuo 
+
+
+principal
+	// Declarações
+	inteiro start,n[20],nivel,pc,cont;
+	caracter serie;
+
+	// Instruções
+
+	escreval("Ola serei seu personal trainer virtual hoje");
+	escreval(" ");
+	escreval("Tecle 1 para continuar ou 2 para desistir");
+	leia(start);
+	cont = 0;
+	se(start == 2)entao
+		escreval("Que decepção!!!");
+	fimSe
+	se(start == 1)entao
+		escreval("selecione seu nível:");
+		escreval("(1) - Iniciante");
+		escreval("(2) - Avançado");
+		leia(nivel);
+		escreval("Certo agora defina quais grupos musculares pretende treinar");
+		escreval("(1) - Costas e Biceps");
+		escreval("(2) - Peito e Triceps");
+		escreval("(3) - Pernas");
+		leia(pc);
+		//primeira opc
+		se( nivel == 1 e pc==1)entao
+			escreval( " 3x12 de puxada frontal");
+			escreval("tecle qualquer tecla ao final de cada serie");
+			enquanto(cont != 3)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreval( " 3x12 de remada cerrote");
+			escreval("tecle qualquer tecla ao final de cada serie");
+
+			enquanto(cont != 3)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreval( " 3x12 rosca direta");
+			escreval("tecle qualquer tecla ao final de cada serie");
+
+			enquanto(cont != 3)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreval( " 3x12 Biceps Pulley");
+			escreval("tecle qualquer tecla ao final de cada serie");
+
+			enquanto(cont != 3)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreva("Nota de cansaço(0 a 10)");
+			leia(n[0]);
+			escreva("Nota de dor muscular (0 a 10)");
+			leia(n[1]);
+			escreva("Nota de corpo feliz  (0 a 10)");
+			leia(n[2]);
+			escreval(avaliacao(n));
+
+
+
+
+
+
+
+		fimSe
+		//Segunda opc
+		se( nivel == 1 e pc==2)entao
+			escreval( " 3x12 de supino reto com barra ");
+			escreval("tecle qualquer tecla ao final de cada serie");
+			enquanto(cont != 3)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreval( " 3x12 de supino inclinado com halteres");
+			escreval("tecle qualquer tecla ao final de cada serie");
+
+			enquanto(cont != 3)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreval( " 3x12 Triceps maquina");
+			escreval("tecle qualquer tecla ao final de cada serie");
+
+			enquanto(cont != 3)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreval( " 3x12 Triceps pulley");
+			escreval("tecle qualquer tecla ao final de cada serie");
+
+			enquanto(cont !=3 )faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreva("Nota de cansaço(0 a 10)");
+			leia(n[0]);
+			escreva("Nota de dor muscular (0 a 10)");
+			leia(n[1]);
+			escreva("Nota de corpo feliz  (0 a 10)");
+			leia(n[2]);
+			escreval(avaliacao(n));
+		fimSe
+		//terceira opc
+		se( nivel == 1 e pc==3)entao
+
+			escreval( " 3x12 de agachamento articulado ");
+			escreval("tecle qualquer tecla ao final de cada serie");
+			enquanto(cont != 3)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreval( " 3x12 cadeira extensora");
+			escreval("tecle qualquer tecla ao final de cada serie");
+
+			enquanto(cont != 3)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreval( "flexor de joelho");
+			escreval("tecle qualquer tecla ao final de cada serie");
+
+			enquanto(cont != 3)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreval( " 3x12 de hack machine");
+			escreval("tecle qualquer tecla ao final de cada serie");
+
+			enquanto(cont !=3 )faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreva("Nota de cansaço(0 a 10)");
+			leia(n[0]);
+			escreva("Nota de dor muscular (0 a 10)");
+			leia(n[1]);
+			escreva("Nota de corpo feliz  (0 a 10)");
+			leia(n[2]);
+			escreval(avaliacao(n));
+		fimSe
+		//quarta opc
+		se( nivel == 2 e pc==1)entao
+			escreval( " 4x12 de Crucifixo inverso TRX");
+			escreval("tecle qualquer tecla ao final de cada serie");
+			enquanto(cont != 4)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreval( " 4x12 de Remada unilateral");
+			escreval("tecle qualquer tecla ao final de cada serie");
+
+			enquanto(cont != 4)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreval( " 4x12 Rosca direta");
+			escreval("tecle qualquer tecla ao final de cada serie");
+
+			enquanto(cont != 4)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreval( " 4x12 Rosca martelo");
+			escreval("tecle qualquer tecla ao final de cada serie");
+
+			enquanto(cont != 4)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreva("Nota de cansaço(0 a 10)");
+			leia(n[0]);
+			escreva("Nota de dor muscular (0 a 10)");
+			leia(n[1]);
+			escreva("Nota de corpo feliz  (0 a 10)");
+			leia(n[2]);
+			escreval(avaliacao2(n));
+		fimSe
+		//quinta opc
+		se( nivel == 2 e pc==2)entao
+					escreval( " 4x12 de supino reto com barra ");
+			escreval("tecle qualquer tecla ao final de cada serie");
+			enquanto(cont != 4)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreval( " 4x12 de crucifixo");
+			escreval("tecle qualquer tecla ao final de cada serie");
+
+			enquanto(cont != 4)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreval( " 4x12 Triceps Frances");
+			escreval("tecle qualquer tecla ao final de cada serie");
+
+			enquanto(cont != 4)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreval( " 4x12 Triceps pulley");
+			escreval("tecle qualquer tecla ao final de cada serie");
+
+			enquanto(cont !=4 )faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreva("Nota de cansaço(0 a 10)");
+			leia(n[0]);
+			escreva("Nota de dor muscular (0 a 10)");
+			leia(n[1]);
+			escreva("Nota de corpo feliz  (0 a 10)");
+			leia(n[2]);
+			escreval(avaliacao2(n));
+		fimSe
+		//sexta opc
+		se( nivel == 2 e pc==3)entao
+		escreval( " 4x12 de leg press");
+			escreval("tecle qualquer tecla ao final de cada serie");
+			enquanto(cont != 4)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreval( " 4x12 de agachamento com barra");
+			escreval("tecle qualquer tecla ao final de cada serie");
+
+			enquanto(cont != 4)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreval( " 4x12 Panturrilha leg press");
+			escreval("tecle qualquer tecla ao final de cada serie");
+
+			enquanto(cont != 4)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreval( " 4x12 Hack Machine");
+			escreval("tecle qualquer tecla ao final de cada serie");
+
+			enquanto(cont != 4)faca
+				leiaCaracter(serie);
+				cont = cont + 1;
+
+			fimEnquanto
+			cont = 0;
+			escreva("Nota de cansaço(0 a 10)");
+			leia(n[0]);
+			escreva("Nota de dor muscular (0 a 10)");
+			leia(n[1]);
+			escreva("Nota de corpo feliz  (0 a 10)");
+			leia(n[2]);
+			escreval(avaliacao2(n));
+		fimSe
+
+
+
+
+
+
+
+
+
+
+
+	fimSe
+fimPrincipal
+funcao texto avaliacao(inteiro n[])
+	texto t;
+	se(n[0] <= 5 e n[1] <=5 e n[2]>=5)entao
+		t = "Muito bem, pode ir para o avançado";
+	senao
+		t = "Continue no nível iniciante";
+	fimSe
+	retorna t;
+fimFuncao
+funcao texto avaliacao2(inteiro n[])
+	texto t;
+	se(n[0] <= 5 e n[1] <=5 e n[2]>=5)entao
+		t = "Muito bem, você realmente é avançado!";
+	senao
+		t = "volte para o nível iniciante!";
+	fimSe
+	retorna t;
+fimFuncao
